@@ -200,7 +200,7 @@ Shutting down asOS...
 ## or
 
 # Installation (Option 2, not 100% work)
-1. Download a [release]()
+1. Download a [release](https://github.com/MDTheGame/asOS/releases/)
 2. Run a `asOS.exe`
 
 ------
