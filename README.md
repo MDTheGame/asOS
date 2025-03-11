@@ -4,7 +4,7 @@
 ## 1. Information
 The **sub-system** for Windows, **based on C.** Inspired by the `Absolute Solver` from `Murder Drones`.
 
-asOS is a lightweight command-line interface (CLI) designed to provide a simple and efficient way to interact with your system. It offers a set of commands for file management, directory navigation, and running external programs.
+asOS is a lightweight command-line interface (CLI) designed to provide a simple and efficient way to interact with your system. It offers a set of commands for file management, directory navigation, user management, and running external programs.
 
 ------
 
@@ -24,15 +24,29 @@ Example:
 ```
 SYS:/C:\Users\{user}> help
 Available commands:
-  help - Show this help message
-  create <filename> <content> - Create a file
-  read <filename> - Read a file
-  ls / dir - List files in current directory
-  cd <path> - Change directory
-  mkdir <path> - Create a directory
-  run <program> - Run an external program
-  about - Show information about asOS
-  exit - Shutdown asOS
+  -> help - Show this help message
+  -> create <filename> <content> - Create a file
+  -> read <filename> - Read a file
+  -> rm/del <filename> - Delete a file
+  -> ls / dir - List files in current directory
+  -> cd <path> - Change directory
+  -> mkdir <path> - Create a directory
+  -> run <program> - Run an external program
+  -> about - Show information about asOS
+  -> register - Register a new user
+  -> login - Login as a user
+  -> logout - Logout current user
+  -> setlang <language> - Set language (English/Russian) (BETA)
+  -> users - List all users
+  -> deleteuser <username> - Delete a user
+  -> restrict <username> - Restrict a user
+  -> grant <username> - Grant permissions to a user
+  -> disableperm <username> <permission> - Disable a permission for a user
+  -> enableperm <username> <permission> - Enable a permission for a user
+  -> np <filename> - asOS Notepad
+  -> pk - Process Killer (Task Manager)
+  -> pac [install/update/uninstall/ --version] - PAC System (Package for asOS based on C)
+  -> exit - Shutdown asOS
 ```
 
 ------
@@ -70,7 +84,27 @@ Hello, World!
 
 ------
 
-## 4. List Files (ls/dir)
+## 4. Delete (rm/del)
+**Deletes a file.**
+
+Usage:
+```
+rm <filename>
+```
+or
+```
+del <filename>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> rm example.txt
+File 'example.txt' deleted.
+```
+
+------
+
+## 5. List Files (ls/dir)
 **Lists all files and directories in the current directory.**
 
 Usage:
@@ -100,7 +134,7 @@ Files in current directory:
 
 ------
 
-## 5. Change Directory (cd)
+## 6. Change Directory (cd)
 **Changes the current directory to the specified path.**
 
 Usage:
@@ -116,7 +150,7 @@ Changed directory to: C:\Users
 
 ------
 
-## 6. Make Directory (mkdir)
+## 7. Make Directory (mkdir)
 **Creates a new directory at the specified path.**
 
 Usage:
@@ -132,7 +166,7 @@ Directory 'new_folder' created.
 
 ------
 
-## 7. Run
+## 8. Run
 **Runs an external program.**
 
 Usage:
@@ -148,7 +182,7 @@ SYS:/C:\Users\{user}> run notepad.exe
 
 ------
 
-## 8. About
+## 9. About
 **Displays information about asOS.**
 
 Usage:
@@ -160,7 +194,7 @@ Example:
 ```
 SYS:/C:\Users\{user}> about
 ---asOS---
-Version: alpha-0.1
+Version: alpha-0.2
 Creators: NTheCuteDrone, DeepSeek
 
 The sub-system based on C & motives = Absolute Solver from Murder Drones
@@ -170,7 +204,221 @@ Thanks for using asOS!
 
 ------
 
-## 9. Exit
+## 10. Register
+**Registers a new user.**
+
+Usage:
+```
+register
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> register
+Enter username: testuser
+Enter password: testpass
+Enter shortname: test
+User 'testuser' registered.
+```
+
+------
+
+## 11. Login
+**Logs in as a user.**
+
+Usage:
+```
+login
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> login
+Enter username: testuser
+Enter password: testpass
+User 'testuser' logged in.
+```
+
+------
+
+## 12. Logout
+**Logs out the current user.**
+
+Usage:
+```
+logout
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> logout
+User 'testuser' logged out.
+```
+
+------
+
+## 13. Set Language (setlang)
+**Sets the language of the system (English/Russian).**
+
+Usage:
+```
+setlang <language>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> setlang Russian
+Language set to Russian.
+```
+
+------
+
+## 14. Users
+**Lists all registered users.**
+
+Usage:
+```
+users
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> users
+Users:
+  testuser (test) - Permissions: CREATE DELETE READ MKDIR CD RUN
+```
+
+------
+
+## 15. Delete User (deleteuser)
+**Deletes a user.**
+
+Usage:
+```
+deleteuser <username>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> deleteuser testuser
+User 'testuser' deleted.
+```
+
+------
+
+## 16. Restrict User (restrict)
+**Restricts a user's permissions.**
+
+Usage:
+```
+restrict <username>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> restrict testuser
+User 'testuser' restricted.
+```
+
+------
+
+## 17. Grant Permissions (grant)
+**Grants permissions to a user.**
+
+Usage:
+```
+grant <username>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> grant testuser
+User 'testuser' granted permissions.
+```
+
+------
+
+## 18. Disable Permission (disableperm)
+**Disables a specific permission for a user.**
+
+Usage:
+```
+disableperm <username> <permission>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> disableperm testuser CREATE
+Permission 'CREATE' disabled for user 'testuser'.
+```
+
+------
+
+## 19. Enable Permission (enableperm)
+**Enables a specific permission for a user.**
+
+Usage:
+```
+enableperm <username> <permission>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> enableperm testuser CREATE
+Permission 'CREATE' enabled for user 'testuser'.
+```
+
+------
+
+## 20. Notepad (np)
+**Opens asOS Notepad to edit a file.**
+
+Usage:
+```
+np <filename>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> np example.txt
+(Opens asOS Notepad to edit example.txt)
+```
+
+------
+
+## 21. Process Killer (pk)
+**Opens the Process Killer (Task Manager).**
+
+Usage:
+```
+pk
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> pk
+(Opens Process Killer)
+```
+
+------
+
+## 22. PAC System (pac)
+**Manages packages in asOS.**
+
+Usage:
+```
+pac <install|update|uninstall|--version>
+```
+
+Example:
+```
+SYS:/C:\Users\{user}> pac install package.spac
+Package installed from 'package.spac'
+```
+
+------
+
+## 23. Exit
 **Shuts down asOS.**
 
 Usage:
@@ -186,31 +434,17 @@ Shutting down asOS...
 
 ------
 
-# Installation (Option 1)
-1. Clone the repository or download the source code.
-2. Compile the code using a C compiler (e.g., GCC):
-   ```
-   gcc asOS-x86_64.c -o asOS.exe
-   ```
-3. Run the compiled executable:
-   ```
-   ./asOS.exe
-   ```
-
-## or
-
-# Installation (Option 2, not 100% work)
-1. Download a [release](https://github.com/MDTheGame/asOS/releases/)
-2. Run a `asOS.exe`
+# Installation
+1. Download the latest release from the [releases page](https://github.com/MDTheGame/asOS/releases/).
+2. Extract the files and run `asOS.exe`.
 
 ------
 
 # Contributing
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.---
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 
 ------
 
 # Acknowledgments
 - Inspired by the **Absolute Solver** from **Murder Drones**.
 - Thanks to **DeepSeek** for assistance in development.
-```
