@@ -1,0 +1,33 @@
+#include <windows.h>
+
+// Определение информации о версии
+// Иконка для окна приложения
+IDI_APPICON ICON "icon2.ico"
+
+VS_VERSION_INFO VERSIONINFO
+PRODUCTVERSION  0,0,2,0       // Версия продукта
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       VS_FF_PRERELEASE          // Флаги (0x0L для Release)
+FILEOS          VOS_NT_WINDOWS32 // Операционная система
+FILETYPE        VFT_APP       // Тип файла (приложение)
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"     // Код языка (0409 - английский, 04b0 - кодировка Unicode)
+        BEGIN
+            VALUE "CompanyName",      "NTheCuteDrone\0"       // Название компании
+            VALUE "FileDescription",  "Process Killer for asOS.\0" // Описание приложения
+            VALUE "FileVersion",      "0.0.1.0\0"                 // Версия файла
+            VALUE "InternalName",    "pk\0"                  // Внутреннее имя
+            VALUE "LegalCopyright",  "None\0" // Авторские права
+            VALUE "OriginalFilename", "process_killer.exe\0"             // Оригинальное имя файла
+            VALUE "ProductName",      "Process Killer\0"       // Название продукта
+            VALUE "ProductVersion",   "0.0.1.0\0"                 // Версия продукта
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200 // Код языка и кодировка (0409 - английский, 1200 - Unicode)
+    END
+END
