@@ -1,23 +1,24 @@
 # asOS - Absolute Solver OS
-------
+-------------------------------------------------------------------------------
 
-## 1. Information
+1. Information
+-------------------------------------------------------------------------------
 The **sub-system** for Windows, **based on C.** Inspired by the `Absolute Solver` from `Murder Drones`.
 
 asOS is a lightweight command-line interface (CLI) designed to provide a simple and efficient way to interact with your system. It offers a set of commands for file management, directory navigation, user management, and running external programs.
 
-------
-
-## 2. Creators
+-------------------------------------------------------------------------------
+2. Creators
+-------------------------------------------------------------------------------
 - **NTheCuteDrone**
 - **DeepSeek**
 
-------
+-------------------------------------------------------------------------------
+Commands
+-------------------------------------------------------------------------------
 
-# Commands
-------
-
-## 1. Help
+1. Help
+-------------------------------------------------------------------------------
 **Displays the entire list of available commands.**
 
 Example:
@@ -49,9 +50,9 @@ Available commands:
   -> exit - Shutdown asOS
 ```
 
-------
-
-## 2. Create
+-------------------------------------------------------------------------------
+2. Create
+-------------------------------------------------------------------------------
 **Creates a new file with the specified content.**
 
 Usage:
@@ -65,9 +66,9 @@ SYS:/C:\Users\{user}> create example.txt Hello, World!
 File 'example.txt' created.
 ```
 
-------
-
-## 3. Read
+-------------------------------------------------------------------------------
+3. Read
+-------------------------------------------------------------------------------
 **Reads and displays the content of a file.**
 
 Usage:
@@ -82,9 +83,9 @@ Content of 'example.txt':
 Hello, World!
 ```
 
-------
-
-## 4. Delete (rm/del)
+-------------------------------------------------------------------------------
+4. Delete (rm/del)
+-------------------------------------------------------------------------------
 **Deletes a file.**
 
 Usage:
@@ -102,9 +103,9 @@ SYS:/C:\Users\{user}> rm example.txt
 File 'example.txt' deleted.
 ```
 
-------
-
-## 5. List Files (ls/dir)
+-------------------------------------------------------------------------------
+5. List Files (ls/dir)
+-------------------------------------------------------------------------------
 **Lists all files and directories in the current directory.**
 
 Usage:
@@ -132,9 +133,9 @@ Files in current directory:
                2 Dir(s)   XXX,XXX,XXX,XXX bytes free
 ```
 
-------
-
-## 6. Change Directory (cd)
+-------------------------------------------------------------------------------
+6. Change Directory (cd)
+-------------------------------------------------------------------------------
 **Changes the current directory to the specified path.**
 
 Usage:
@@ -148,9 +149,9 @@ SYS:/C:\Users\{user}> cd C:\Users
 Changed directory to: C:\Users
 ```
 
-------
-
-## 7. Make Directory (mkdir)
+-------------------------------------------------------------------------------
+7. Make Directory (mkdir)
+-------------------------------------------------------------------------------
 **Creates a new directory at the specified path.**
 
 Usage:
@@ -164,9 +165,9 @@ SYS:/C:\Users\{user}> mkdir new_folder
 Directory 'new_folder' created.
 ```
 
-------
-
-## 8. Run
+-------------------------------------------------------------------------------
+8. Run
+-------------------------------------------------------------------------------
 **Runs an external program.**
 
 Usage:
@@ -180,9 +181,9 @@ SYS:/C:\Users\{user}> run notepad.exe
 (Opens Notepad)
 ```
 
-------
-
-## 9. About
+-------------------------------------------------------------------------------
+9. About
+-------------------------------------------------------------------------------
 **Displays information about asOS.**
 
 Usage:
@@ -202,9 +203,9 @@ The sub-system based on C & motives = Absolute Solver from Murder Drones
 Thanks for using asOS!
 ```
 
-------
-
-## 10. Register
+-------------------------------------------------------------------------------
+10. Register
+-------------------------------------------------------------------------------
 **Registers a new user.**
 
 Usage:
@@ -221,9 +222,9 @@ Enter shortname: test
 User 'testuser' registered.
 ```
 
-------
-
-## 11. Login
+-------------------------------------------------------------------------------
+11. Login
+-------------------------------------------------------------------------------
 **Logs in as a user.**
 
 Usage:
@@ -239,9 +240,9 @@ Enter password: testpass
 User 'testuser' logged in.
 ```
 
-------
-
-## 12. Logout
+-------------------------------------------------------------------------------
+12. Logout
+-------------------------------------------------------------------------------
 **Logs out the current user.**
 
 Usage:
@@ -255,9 +256,9 @@ SYS:/C:\Users\{user}> logout
 User 'testuser' logged out.
 ```
 
-------
-
-## 13. Set Language (setlang)
+-------------------------------------------------------------------------------
+13. Set Language (setlang)
+-------------------------------------------------------------------------------
 **Sets the language of the system (English/Russian).**
 
 Usage:
@@ -271,9 +272,9 @@ SYS:/C:\Users\{user}> setlang Russian
 Language set to Russian.
 ```
 
-------
-
-## 14. Users
+-------------------------------------------------------------------------------
+14. Users
+-------------------------------------------------------------------------------
 **Lists all registered users.**
 
 Usage:
@@ -288,9 +289,9 @@ Users:
   testuser (test) - Permissions: CREATE DELETE READ MKDIR CD RUN
 ```
 
-------
-
-## 15. Delete User (deleteuser)
+-------------------------------------------------------------------------------
+15. Delete User (deleteuser)
+-------------------------------------------------------------------------------
 **Deletes a user.**
 
 Usage:
@@ -304,9 +305,9 @@ SYS:/C:\Users\{user}> deleteuser testuser
 User 'testuser' deleted.
 ```
 
-------
-
-## 16. Restrict User (restrict)
+-------------------------------------------------------------------------------
+16. Restrict User (restrict)
+-------------------------------------------------------------------------------
 **Restricts a user's permissions.**
 
 Usage:
@@ -320,9 +321,9 @@ SYS:/C:\Users\{user}> restrict testuser
 User 'testuser' restricted.
 ```
 
-------
-
-## 17. Grant Permissions (grant)
+-------------------------------------------------------------------------------
+17. Grant Permissions (grant)
+-------------------------------------------------------------------------------
 **Grants permissions to a user.**
 
 Usage:
@@ -336,9 +337,9 @@ SYS:/C:\Users\{user}> grant testuser
 User 'testuser' granted permissions.
 ```
 
-------
-
-## 18. Disable Permission (disableperm)
+-------------------------------------------------------------------------------
+18. Disable Permission (disableperm)
+-------------------------------------------------------------------------------
 **Disables a specific permission for a user.**
 
 Usage:
@@ -352,9 +353,9 @@ SYS:/C:\Users\{user}> disableperm testuser CREATE
 Permission 'CREATE' disabled for user 'testuser'.
 ```
 
-------
-
-## 19. Enable Permission (enableperm)
+-------------------------------------------------------------------------------
+19. Enable Permission (enableperm)
+-------------------------------------------------------------------------------
 **Enables a specific permission for a user.**
 
 Usage:
@@ -368,9 +369,9 @@ SYS:/C:\Users\{user}> enableperm testuser CREATE
 Permission 'CREATE' enabled for user 'testuser'.
 ```
 
-------
-
-## 20. Notepad (np)
+-------------------------------------------------------------------------------
+20. Notepad (np)
+-------------------------------------------------------------------------------
 **Opens asOS Notepad to edit a file.**
 
 Usage:
@@ -384,9 +385,9 @@ SYS:/C:\Users\{user}> np example.txt
 (Opens asOS Notepad to edit example.txt)
 ```
 
-------
-
-## 21. Process Killer (pk)
+-------------------------------------------------------------------------------
+21. Process Killer (pk)
+-------------------------------------------------------------------------------
 **Opens the Process Killer (Task Manager).**
 
 Usage:
@@ -400,9 +401,9 @@ SYS:/C:\Users\{user}> pk
 (Opens Process Killer)
 ```
 
-------
-
-## 22. PAC System (pac)
+-------------------------------------------------------------------------------
+22. PAC System (pac)
+-------------------------------------------------------------------------------
 **Manages packages in asOS.**
 
 Usage:
@@ -416,9 +417,9 @@ SYS:/C:\Users\{user}> pac install package.spac
 Package installed from 'package.spac'
 ```
 
-------
-
-## 23. Exit
+-------------------------------------------------------------------------------
+23. Exit
+-------------------------------------------------------------------------------
 **Shuts down asOS.**
 
 Usage:
@@ -432,19 +433,19 @@ SYS:/C:\Users\{user}> exit
 Shutting down asOS...
 ```
 
-------
-
-# Installation
+-------------------------------------------------------------------------------
+Installation
+-------------------------------------------------------------------------------
 1. Download the latest release from the [releases page](https://github.com/MDTheGame/asOS/releases/).
 2. Extract the files and run `asOS.exe`.
 
-------
-
-# Contributing
+-------------------------------------------------------------------------------
+Contributing
+-------------------------------------------------------------------------------
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 
-------
-
-# Acknowledgments
+-------------------------------------------------------------------------------
+Acknowledgments
+-------------------------------------------------------------------------------
 - Inspired by the **Absolute Solver** from **Murder Drones**.
 - Thanks to **DeepSeek** for assistance in development.
